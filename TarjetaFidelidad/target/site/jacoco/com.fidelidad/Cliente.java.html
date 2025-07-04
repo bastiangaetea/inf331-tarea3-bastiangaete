@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Cliente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TarjetaFidelidad</a> &gt; <a href="index.source.html" class="el_package">com.fidelidad</a> &gt; <span class="el_source">Cliente.java</span></div><h1>Cliente.java</h1><pre class="source lang-java linenums">package com.fidelidad;
+
+public class Cliente {
+    private String id;
+    private String nombre;
+    private String correo;
+<span class="fc" id="L7">    private int puntos = 0;</span>
+<span class="fc" id="L8">    private Nivel nivel = Nivel.BRONCE;</span>
+<span class="fc" id="L9">    private int streakDias = 0;</span>
+
+<span class="fc" id="L11">    public Cliente(String id, String nombre, String correo) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (!correo.contains(&quot;@&quot;)) throw new IllegalArgumentException(&quot;Correo no válido&quot;);</span>
+<span class="fc" id="L13">        this.id = id;</span>
+<span class="fc" id="L14">        this.nombre = nombre;</span>
+<span class="fc" id="L15">        this.correo = correo;</span>
+<span class="fc" id="L16">    }</span>
+
+    public void agregarPuntos(int puntosGanados) {
+<span class="fc" id="L19">        this.puntos += puntosGanados;</span>
+<span class="fc" id="L20">        this.nivel = Nivel.calcularNivel(this.puntos);</span>
+<span class="fc" id="L21">    }</span>
+
+    // Getters y setters
+<span class="fc" id="L24">    public String getId() { return id; }</span>
+<span class="fc" id="L25">    public String getNombre() { return nombre; }</span>
+<span class="fc" id="L26">    public String getCorreo() { return correo; }</span>
+<span class="fc" id="L27">    public int getPuntos() { return puntos; }</span>
+<span class="fc" id="L28">    public Nivel getNivel() { return nivel; }</span>
+<span class="fc" id="L29">    public int getStreakDias() { return streakDias; }</span>
+
+<span class="fc" id="L31">    public void setStreakDias(int streakDias) { this.streakDias = streakDias; }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
