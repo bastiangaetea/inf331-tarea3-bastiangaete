@@ -1,6 +1,6 @@
 # Tarjeta de Fidelidad Gamificada
 
-Este proyecto implementa un sistema de fidelización de clientes por consola en **Java 21**, usando **TDD** con **JUnit 5** y medición de cobertura con **JaCoCo (EcclEmma)**.
+Este proyecto implementa un sistema de fidelización de clientes por consola en **Java 21**, usando **JUnit 5** y medición de cobertura con **JaCoCo (EcclEmma)**.
 
 ---
 
